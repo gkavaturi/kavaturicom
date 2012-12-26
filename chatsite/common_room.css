@@ -1,0 +1,36 @@
+/* CSS Document */
+
+body{
+	background:#F1F479;
+	top:0px;
+	right:0px;
+	position:relative;
+	}
+
+img{
+	width:50px;
+	height:100%;
+	}
+.container{
+	position:relative;
+	width:450px;
+	top:50px;
+	margin-right:auto;
+	margin-left:auto;
+	text-align:center;
+	}
+
+.left{
+	position:relative;
+	float:left;
+	}
+.right{
+	position:relative;
+	float:right;
+	}
+
+
+.i_mg{
+	position:relative;
+	float:center;
+	}

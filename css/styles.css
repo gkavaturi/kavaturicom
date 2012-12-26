@@ -1,0 +1,37 @@
+body {
+  background: url('/img/bedge_grunge_@2X.png');
+}
+
+.masthead {
+  color: rgba(255, 255, 255, .97);
+  text-shadow: 1px 1px 3px #555;  
+}
+
+#content-block {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px 0px;
+  min-width: 160px;
+  min-height: 140px;
+}
+
+[class*="icon-"] {
+  margin-top:5px;
+  padding-right:8px;
+}
+
+#items-list {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+div.contact {
+  display: none;
+  padding: 20px;
+}
+
+.back {
+  pointer: cursor;
+}
+
+.back a{
+  text-decoration: none;
+}

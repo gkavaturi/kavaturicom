@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>String search</title>
+<style type='text/css'>
+body{
+	background:rgba(47,70,202,0.7);
+	}
+.heading{
+	margin:10px 10px 10px 10px;
+	font-size:36px;
+	text-align:center;
+	height:30px;
+	width:500px;
+}
+#text-body{
+	float:left;
+	height:600px;
+	width:600px;
+	border:1px solid black;
+	margin:10px 10px 10px 10px;
+	padding:4px 4px 4px 4px;
+	overflow:auto;
+	text-align:justify;
+	background:white;
+	}
+#input{
+	float:left;
+	margin:10px 10px 10px 10px;
+	height:500px;
+	}
+#output{
+	background:rgba(255,255,255,0.7);
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+function get_popular(words){
+	var wordCounts = { };
+//var words = str.split(/\b/);
+var counter=1;
+for(var i = 0; i < words.length; i++){
+    wordCounts[ words[i]] = (wordCounts[words[i]] || 0) + 1;
+}
+var sortable = [];
+for (var count in wordCounts)
+{
+	if (counter<6){
+      sortable.push([count, wordCounts[count]]);
+	  counter++;
+	}
+	
+}
+sortable.sort(function(a, b) {return a[1] - b[1]});
+sortable.reverse();
+console.log("now sorted is "+sortable);
+return sortable;
+	}
+	
+function load_file(){
+jQuery("#text-body").load("alice_in_wonderland.txt",function(){console.log('file loaded');});
+jQuery.get("alice_in_wonderland.txt",function(data){str=data;});
+}
+
+
+var patt1,patt2,patt3,characters,m,i;
+var matches="";
+var map=new Object();
+map={"2":"abc","3":"def","4":"ghi","5":"jkl","6":"mno","7":"pqrs","8":"tuv","9":"wxyz"};
+
+
+
+function append_item(list){
+	if (list!=null){
+										for (var temp in list){
+								jQuery('#output').append("<span>"+(parseInt(temp)+1)+". "+i[temp]+"</span><br/>");
+								
+									}
+								}else{
+									jQuery('#output').append("<span>No results</span><br/>");
+								}
+	}
+
+function suggest(inputString){
+	if (inputString.length==0){
+		jQuery('#output').empty();
+		}else{
+
+	if (!(isNaN(inputString))){
+		jQuery('#output').empty();
+		for (var k in inputString){		
+					var b=map[inputString[k]];
+					characters=b[0]+'|'+b[1]+'|'+b[2]+'|'+b[3];
+					if (b[3]){
+								characters+='|'+b[3];
+							}
+						jQuery('#output').empty();
+						if (k==0){
+						patt2=new RegExp('\\s+('+matches.substr(1,k)+'('+characters+'))\\S+','gi')	
+						i=str.match(patt2);
+						}else{
+						matches+=i[k-1];
+						patt3=new RegExp('\\s+('+matches.substr(1,k)+'('+characters+'))\\S+','gi');
+						var l=i.toString();
+						l=l.replace(/,/gi,'');
+						i=l.match(patt3);
+						}
+					    append_item(i);		
+						if (i==null) return;
+					}
+			}else{
+				patt1=new RegExp('('+inputString+')\\S+','gi');
+				i=str.match(patt1);
+				append_item(i);
+			}
+		}
+	}
+</script>
+</head>
+<body onLoad='load_file();'>
+<div class='heading'>Text Search through JavaScript</div>
+<div id='text-body' class='text-class'></div>
+<div id='input'>
+<input onkeyup="suggest(this.value);" type='text' id='query' placeholder='Search String'/>
+<div id='output'>
+</div>
+</div>
+</div>
+</body>
+</html>

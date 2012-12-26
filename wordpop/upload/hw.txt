@@ -1,0 +1,19 @@
+var els = document.getElementsByTagName("td");
+var elsArray = Array.prototype.slice.call(els, 0);
+var fragment = document.createDocumentFragment();
+var i=0;
+elsArray.forEach(function(el) {
+    if (i==0){
+    document.write("{<br/>");
+    document.write("\"name\": \""+el.innerHTML+"\",<br/>");
+    i++;
+    }else if (i==1){
+     document.write("\"number\": \""+el.innerHTML+"\",<br/>");
+        i++;
+    }else if (i==2){
+     document.write("\"link\": \""+el.innerHTML+"\",<br/>");            
+     document.write("},<br/>");    
+     i=0;        
+    }
+    //fragment.appendChild( el.innerHTML );
+});

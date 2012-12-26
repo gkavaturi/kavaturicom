@@ -1,0 +1,10 @@
+RewriteEngine on
+
+RewriteRule ^projects(/)?$                                    projects.html                   [P]
+RewriteRule ^403(/)?$                                         403.html                        [P]
+RewriteRule ^404(/)?$                                         404.html                        [P]
+RewriteRule ^500(/)?$                                         500.html                        [P]
+
+ErrorDocument 403                                             /403
+ErrorDocument 404                                             /404.html
+ErrorDocument 500                                             /500
