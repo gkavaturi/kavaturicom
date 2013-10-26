@@ -1,72 +1,232 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>
-            Gokul Kavaturi Personal Website
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content=""><!-- Le styles -->
-        <link href="/css/bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="/css/styles.css" rel="stylesheet" type="text/css">
-        <link href="/css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
-        <link href="/css/animate.css" rel="stylesheet" type="text/css">
-        <link href="/js/google-code-prettify/prettify.css" rel="stylesheet" type="text/css"><!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    </head>
-    <body data-spy="scroll">
-        <div class="jumbotron masthead">
-            <div class="container">
-                <div class="row-fluid">
-                    <div id="content-block" class="span3 contents well">
-                        <div id="items-list" class="animated">
-                            <ul class="nav nav-list unstyled vertical">
-                                <li class="">
-                                    <i class="icon-user pull-left"></i> 
-                                    <a href="http://www.github.com/gkavaturi" target="_blank">Work</a>
-                                </li>
-                                <li class="">
-                                    <i class="icon-briefcase pull-left"></i> 
-                                    <a href="http://www.linkedin.com/in/gokulkavaturi" target="_blank">CV</a>
-                                </li>
-                                <li class="">
-                                    <i class="icon-wrench pull-left"></i> 
-                                    <a href="/projects">Projects</a>
-                                </li>
-                                <li class="flip">
-                                    <i class="icon-thumbs-up pull-left"></i>     
-                                    <a href="#">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="contact animated">
-                            <ul class='unstyled vertical'>
-                                <li>
-                                    <span>Email: </span><span>gokul.kavaturi@hotmail.com</span>
-                                </li>
-                                <li>
-                                    <span>Twitter: </span><span>@gokulkav</span>
-                                </li>   
-                            </ul>
-                        <span class="flip"><a href="#"><< Back</a></span>
-                        </div>
-                    </div>
-                    <div class="span3">
-                        <h1>
-                            Pursuits of a software programmer
-                        </h1> 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        </footer>
-        <script src="/js/jquery.js" type="text/javascript"></script>
-        <script src="/js/google-code-prettify/prettify.js" type="text/javascript"></script>
-        <script src="/js/application.js" type="text/javascript"></script>
-    </body>
+    <title>Stylish Portfolio Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Side Menu -->
+    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="icon-reorder"></i></a>
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="icon-remove"></i></a>
+        <li class="sidebar-brand"><a href="http://startbootstrap.com">Start Bootstrap</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <!-- /Side Menu -->
+  
+    <!-- Full Page Image Header Area -->
+    <div class="header">
+      <div class="vert-text">
+        <h1>Pursuits of a Software Engineer</h1>
+        <h3>"This world is but a canvas to our imagination"</h3>
+        <h4><em class="author">- Henry David Thoreau</em></h4>
+        <a href="#projects" class="btn btn-default btn-lg">View My Projects</a>
+      </div> 
+    </div>
+    <!-- /Full Page Image Header Area -->
+  
+    <!-- Intro -->
+    <div id="intro" class="intro">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <h2>Subtle Sidebar is the Perfect Template for your Next Portfolio Website Project!</h2>
+            <p class="lead">This template really has it all. It's up to you to customize it to your liking! It features some fresh photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Intro -->
+  
+    <!-- Services -->
+    <div class="services">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <h2>Our Services</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 col-md-offset-2 text-center">
+            <div class="service-item">
+              <i class="service-icon icon-rocket"></i>
+              <h4>Spacecraft Repair</h4>
+              <p>Did your navigation system shut down in the middle of that asteroid field? We can repair any dings and scrapes to your spacecraft!</p>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <div class="service-item">
+              <i class="service-icon icon-magnet"></i>
+              <h4>Problem Solving</h4>
+              <p>Need to know how magnets work? Our problem solving solutions team can help you identify problems and conduct exploratory research.</p>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <div class="service-item">
+              <i class="service-icon icon-shield"></i>
+              <h4>Blacksmithing</h4>
+              <p>Planning a time travel trip to the middle ages? Preserve the space time continuum by blending in with period accurate armor and weapons.</p>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <div class="service-item">
+              <i class="service-icon icon-pencil"></i>
+              <h4>Pencil Sharpening</h4>
+              <p>We've been voted the best pencil sharpening service for 10 consecutive years. If you have a pencil that feels dull, we'll get it sharp!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Services -->
+
+    <!-- Callout -->
+    <div class="callout">
+      <div class="vert-text">
+        <h1>A Dramatic Text Area</h1>
+      </div>
+    </div>
+    <!-- /Callout -->
+
+    <!-- Portfolio -->
+    <div id="projects" class="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <h2>Latest Projects</h2>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-lg-12">
+           <h3>Latest Features</h3>
+        </div>
+      </div><!-- /.row -->
+      
+      <div class="row text-center">
+
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail">
+            <img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail">
+            <img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail">
+            <img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 hero-feature">
+          <div class="thumbnail">
+            <img src="http://placehold.it/800x500" alt="">
+            <div class="caption">
+              <h3>Feature Label</h3>
+              <p>This would be a great spot to feature some brand new products!</p>
+              <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p>
+            </div>
+          </div>
+        </div>
+
+
+      </div><!-- /.row -->
+      </div>
+    </div>
+    <!-- /Portfolio -->
+
+    <!-- Call to Action -->
+    <div class="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <h3>The buttons below are impossible to resist.</h3>
+            <a href="#" class="btn btn-lg btn-default">Click Me!</a>
+            <a href="#" class="btn btn-lg btn-primary">Look at Me!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Call to Action -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3 text-center">
+            <ul class="list-inline">
+              <li><i class="icon-facebook icon-2x"></i></li>
+              <li><i class="icon-twitter icon-2x"></i></li>
+              <li><i class="icon-dribbble icon-2x"></i></li>
+            </ul>
+            <hr>
+            <p>Copyright &copy; Company 2013</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- /Footer -->
+
+  <!-- Bootstrap core JavaScript -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+  <!-- Custom JavaScript for the Side Menu - Put in a custom JS file if you want to clean this up -->
+  <script>
+      $("#menu-close").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+  </script>
+  <script>
+      $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#sidebar-wrapper").toggleClass("active");
+      });
+  </script>
+
+  </body>
+
 </html>
