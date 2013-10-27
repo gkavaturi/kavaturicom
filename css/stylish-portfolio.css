@@ -198,3 +198,8 @@ i.service-icon:hover {
 footer {
   padding: 100px 0;
 }
+
+.top-scroll a {
+  text-decoration: none;
+  color: inherit;
+}
