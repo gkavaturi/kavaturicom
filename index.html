@@ -20,10 +20,10 @@
   <body>
 
     <!-- Side Menu -->
-    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle"><i class="icon-reorder"></i></a>
+    <a id="menu-toggle" href="#" class="btn btn-primary btn-lg toggle menu-action"><i class="icon-reorder"></i></a>
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
-        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="icon-remove"></i></a>
+        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle menu-action"><i class="icon-remove"></i></a>
         <li class="sidebar-brand"><a href="./">Menu</a></li>
         <li><a href="#">Home</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -120,12 +120,6 @@
             <hr>
           </div>
         </div>
-        <div class="row">
-        <div class="col-lg-12">
-           <h3>Latest Features</h3>
-        </div>
-      </div><!-- /.row -->
-      
       <div class="row text-center">
 
         <div class="col-lg-3 col-md-6 hero-feature">
@@ -134,40 +128,36 @@
             <div class="caption">
               <h3><a target="_blank" href="http://bitnode.herokuapp.com/">BitNode</a></h3>
               <p>A complete peer to peer software system built as my graduate project with a web interface written in nodejs, express & backbonejs</p>
-              <!-- <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p> -->
             </div>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
+            <img src="img/p7.png" alt="bitnode">
             <div class="caption">
-              <h3>Future Project</h3>
-              <p>TBA</p>
-              <!-- <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p> -->
+              <h3><a target="_blank" href="http://gkavaturi.github.io/p7/">Online Parking Reservation</a></h3>
+              <p>A mock reservation system for parking lots</p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
+            <img src="http://placehold.it/800x500" alt="placeholder">
             <div class="caption">
               <h3>Future Project</h3>
               <p>TBA</p>
-              <!-- <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p> -->
             </div>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-6 hero-feature">
           <div class="thumbnail">
-            <img src="http://placehold.it/800x500" alt="">
+            <img src="http://placehold.it/800x500" alt="placeholder">
             <div class="caption">
               <h3>Future Project</h3>
               <p>TBA</p>
-              <!-- <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p> -->
             </div>
           </div>
         </div>
@@ -187,11 +177,7 @@
             <hr>
           </div>
         </div>
-        <div class="row">
-        <div class="col-lg-12">
-           <h3>Presentations</h3>
-        </div>
-      </div><!-- /.row -->
+        
       
       <div class="row text-center">
 
@@ -201,7 +187,6 @@
             <div class="caption">
               <h3><a target="_blank" href="http://gkavaturi.github.io/backbone-intro/">Backbone Intro</a></h3>
               <p>Simple intro to backbonejs for team members</p>
-              <!-- <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p> -->
             </div>
           </div>
         </div>
@@ -212,7 +197,6 @@
             <div class="caption">
               <h3><a target="_blank" href="http://gkavaturi.github.io/2wheelcommuting">2Wheel Commuting</a></h3>
               <p>Non-technical content. Uses impressjs with CSS 3D transformations</p>
-              <!-- <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p> -->
             </div>
           </div>
         </div>
@@ -223,7 +207,6 @@
             <div class="caption">
               <h3>Future Project</h3>
               <p>TBA</p>
-              <!-- <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p> -->
             </div>
           </div>
         </div>
@@ -234,7 +217,6 @@
             <div class="caption">
               <h3>Future Project</h3>
               <p>TBA</p>
-              <!-- <p><a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a></p> -->
             </div>
           </div>
         </div>
@@ -293,13 +275,7 @@
 
   <!-- Custom JavaScript for the Side Menu - Put in a custom JS file if you want to clean this up -->
   <script>
-      $("#menu-close").click(function(e) {
-          e.preventDefault();
-          $("#sidebar-wrapper").toggleClass("active");
-      });
-  </script>
-  <script>
-      $("#menu-toggle").click(function(e) {
+      $(".menu-action").click(function(e) {
           e.preventDefault();
           $("#sidebar-wrapper").toggleClass("active");
       });
